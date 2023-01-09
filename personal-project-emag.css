@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #252525;
+  line-height: 1.6;
+  display: grid;
+  grid-template: "header header header header" 3em "topnav topnav topnav topnav" 3em "breadcrumbs breadcrumbs breadcrumbs breadcrumbs" 3em "sidenav main main main" 50vh "footer footer footer footer" 3em;
+  grid-auto-columns: 1fr;
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background: #252525;
+  color: #e9d20f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  grid-area: topnav;
+  background: #c90c0c;
+  color: #e9d20f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  grid-area: breadcrumbs;
+  background: #4e0cc9;
+  color: #e9d20f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside {
+  grid-area: sidenav;
+  background: #c90c0c;
+}
+main {
+  grid-area: main;
+  background: #09aa32;
+}
+
+footer {
+  grid-area: footer;
+}
