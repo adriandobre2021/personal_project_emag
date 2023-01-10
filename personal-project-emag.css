@@ -9,6 +9,7 @@ body {
   display: grid;
   grid-template: "header header header header" 3em "topnav topnav topnav topnav" 3em "breadcrumbs breadcrumbs breadcrumbs breadcrumbs" 3em "sidenav main main main" 50vh "footer footer footer footer" 3em;
   grid-auto-columns: 1fr;
+  grid-gap: 0.2rem;
 }
 
 header {
@@ -51,4 +52,17 @@ main {
 
 footer {
   grid-area: footer;
+}
+@media only screen and (max-width: 550px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr 2.5fr 1fr 0.4fr;
+    grid-template-areas:
+      "header"
+      "topnav"
+      "breadcrumbs"
+      "main"
+      "sidenav"
+      "footer";
+  }
 }
